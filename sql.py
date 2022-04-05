@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 def start() -> scoped_session:
-    engine = create_engine("postgres://ykfmxfem:Pm3VDsQXsWt8c0hbaPUYdM9bGNgtMPjl@fanny.db.elephantsql.com/ykfmxfem", client_encoding="utf8")
+    engine = create_engine("postgres://bokpwdyjglglyc:7d8c05ee8d40f4cb8961487fb0b6dca10919c5d020c926010d8e4b4b282160fd@ec2-3-223-213-207.compute-1.amazonaws.com:5432/d49fid5knbvug3", client_encoding="utf8")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
